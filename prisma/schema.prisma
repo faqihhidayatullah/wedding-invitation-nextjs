@@ -1,0 +1,26 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Guest {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String?
+  phone     String?
+  createdAt DateTime @default(now())
+  rsvp      Rsvp[]
+}
+
+model Rsvp {
+  id        Int      @id @default(autoincrement())
+  status    String   // attending / not_attending
+  message   String?
+  guestId   Int
+  guest     Guest    @relation(fields: [guestId], references: [id])
+  createdAt DateTime @default(now())
+}

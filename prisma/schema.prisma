@@ -1,12 +1,11 @@
 datasource db {
-  provider = "mysql"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
 generator client {
   provider = "prisma-client-js"
 }
-
 model Guest {
   id        Int      @id @default(autoincrement())
   name      String
@@ -24,3 +23,4 @@ model Rsvp {
   guest     Guest    @relation(fields: [guestId], references: [id])
   createdAt DateTime @default(now())
 }
+

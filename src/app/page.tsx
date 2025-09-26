@@ -140,13 +140,12 @@ export default function Page() {
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-[GreatVibes]">Faqih & Nia</h1>
 
               <button
-  onClick={() => setIsOpen(true)}
-  className="mt-4 sm:mt-6 bg-white text-black px-5 sm:px-6 py-2 sm:py-3 rounded-lg shadow hover:bg-gray-200 transition flex items-center justify-center gap-2 leading-none"
->
-  <FaEnvelope className="text-lg" /> 
-  <span className="inline-block">Open Invitation</span>
-</button>
-
+                onClick={() => setIsOpen(true)}
+                className="mt-4 sm:mt-6 bg-white text-black px-5 sm:px-6 py-2 sm:py-3 rounded-lg shadow hover:bg-gray-200 transition flex items-center justify-center gap-2 leading-none"
+              >
+                <FaEnvelope className="text-lg" /> 
+                <span className="inline-block">Open Invitation</span>
+              </button>
             </div>
           </motion.section>
         )}
@@ -179,19 +178,21 @@ export default function Page() {
               <p className="text-lg sm:text-xl" data-aos="fade-right">Akan melangsungkan resepsi dalam:</p>
 
               <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mt-6">
-                {[{ label: "Hari", value: timeLeft.days },
+                {[
+                  { label: "Hari", value: timeLeft.days },
                   { label: "Jam", value: timeLeft.hours },
                   { label: "Menit", value: timeLeft.minutes },
-                  { label: "Detik", value: timeLeft.seconds }].map((item, i) => (
-                    <div
-                      key={i}
-                      className="bg-pink-600 rounded-full w-20 h-20 sm:w-24 sm:h-24 flex flex-col items-center justify-center shadow-lg"
-                      data-aos={i % 2 === 0 ? "fade-right" : "fade-left"}
-                    >
-                      <p className="text-lg sm:text-2xl font-bold">{item.value}</p>
-                      <span className="text-xs sm:text-sm">{item.label}</span>
-                    </div>
-                  ))}
+                  { label: "Detik", value: timeLeft.seconds }
+                ].map((item, i) => (
+                  <div
+                    key={i}
+                    className="bg-pink-600 rounded-full w-20 h-20 sm:w-24 sm:h-24 flex flex-col items-center justify-center shadow-lg"
+                    data-aos={i % 2 === 0 ? "fade-right" : "fade-left"}
+                  >
+                    <p className="text-lg sm:text-2xl font-bold">{item.value}</p>
+                    <span className="text-xs sm:text-sm">{item.label}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </section>
@@ -202,10 +203,7 @@ export default function Page() {
             data-aos="fade-up"
           >
             <p className="max-w-3xl mx-auto text-base sm:text-lg italic text-gray-700 leading-relaxed">
-              "Dan di antara tanda-tanda kekuasaan Allah ialah diciptakan-Nya untukmu pasangan hidup
-              dari jenismu sendiri supaya kamu merasa tenteram di samping-Nya dan dijadikan-Nya rasa
-              kasih sayang di antara kamu. Sesungguhnya yang demikian itu menjadi bukti kekuasaan Allah
-              bagi kaum yang berfikir." <br />
+              &quot;Dan di antara tanda-tanda kekuasaan Allah ialah diciptakan-Nya untukmu pasangan hidup dari jenismu sendiri supaya kamu merasa tenteram di samping-Nya dan dijadikan-Nya rasa kasih sayang di antara kamu. Sesungguhnya yang demikian itu menjadi bukti kekuasaan Allah bagi kaum yang berfikir.&quot; <br />
               <span className="font-semibold">(QS. Ar-Rum 21)</span>
             </p>
           </section>
@@ -227,7 +225,7 @@ export default function Page() {
                   className="rounded-xl shadow-lg mb-4 w-full object-cover"
                 />
                 <h3 className="text-xl sm:text-2xl font-semibold">kurnia tri</h3>
-                <p className="text-gray-600">Putri dari Bpk. Prasetyo & Ibu Siti juwariyah</p>
+                <p className="text-gray-600">Putri dari Bpk. Prasetyo &amp; Ibu Siti juwariyah</p>
               </div>
               <div data-aos="fade-left">
                 <Image
@@ -239,7 +237,7 @@ export default function Page() {
                   className="rounded-xl shadow-lg mb-4 w-full object-cover"
                 />
                 <h3 className="text-xl sm:text-2xl font-semibold">Muhammad faqih hidayatullah</h3>
-                <p className="text-gray-600">Putra dari Bpk. Khusnul abidin & Ibu Uswatun</p>
+                <p className="text-gray-600">Putra dari Bpk. Khusnul abidin &amp; Ibu Uswatun</p>
               </div>
             </div>
           </section>
@@ -259,17 +257,16 @@ export default function Page() {
                 <b>Hotel Grand Orchard</b> <br /> Gunung Sahari – Kemayoran, Jakarta Pusat
               </p>
               <a
-  href="https://maps.app.goo.gl/GZL1C5F8uAebmKCY8"
-  target="_blank"
-  className="inline-flex items-center justify-center gap-2 mt-4 sm:mt-6 
-             bg-pink-600 px-5 sm:px-6 py-2 sm:py-3 rounded-full shadow 
-             hover:bg-pink-700 transition leading-none"
-  data-aos="fade-up"
->
-  <FaMapMarkerAlt className="text-lg -mt-0.5" />
-  <span className="inline-block">Lihat Lokasi</span>
-</a>
-
+                href="https://maps.app.goo.gl/GZL1C5F8uAebmKCY8"
+                target="_blank"
+                className="inline-flex items-center justify-center gap-2 mt-4 sm:mt-6 
+                           bg-pink-600 px-5 sm:px-6 py-2 sm:py-3 rounded-full shadow 
+                           hover:bg-pink-700 transition leading-none"
+                data-aos="fade-up"
+              >
+                <FaMapMarkerAlt className="text-lg -mt-0.5" />
+                <span className="inline-block">Lihat Lokasi</span>
+              </a>
             </div>
           </section>
 
@@ -307,7 +304,7 @@ export default function Page() {
           {/* ================= WEDDING WISH ================= */}
           <section id="rsvp" className="py-12 sm:py-16 px-4 bg-black text-white" data-aos="fade-up">
             <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4 sm:mb-6">Wedding Wish</h2>
-            <p className="text-center text-gray-300 mb-6 sm:mb-8">Beri Do'a & Ucapan Terbaikmu</p>
+            <p className="text-center text-gray-300 mb-6 sm:mb-8">Beri Doa &amp; Ucapan Terbaikmu</p>
 
             {/* Counter */}
             <div className="flex justify-center gap-3 sm:gap-4 mb-6 sm:mb-8">
@@ -370,7 +367,7 @@ export default function Page() {
 
           {/* ================= FOOTER ================= */}
           <footer className="py-4 sm:py-6 text-center bg-pink-700 text-white px-2" data-aos="fade-up">
-            <p className="text-xs sm:text-sm md:text-base">© 2025 Faqih & Nia. All rights reserved.</p>
+            <p className="text-xs sm:text-sm md:text-base">© 2025 Faqih &amp; Nia. All rights reserved.</p>
           </footer>
         </>
       )}

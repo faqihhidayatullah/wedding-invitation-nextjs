@@ -171,9 +171,6 @@ export default function Page() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      {/* Overlay hitam transparan */}
-      <div className="absolute inset-0 bg-black/50" />
-
       {/* Konten utama */}
       <div
         className="relative z-10 space-y-4 sm:space-y-6 text-white px-4"
@@ -201,6 +198,7 @@ export default function Page() {
     </motion.section>
   )}
 </AnimatePresence>
+
 
 
       {/* ================= ISI UNDANGAN ================= */}
